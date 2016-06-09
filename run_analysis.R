@@ -3,6 +3,13 @@
 ## This script collates several datasets into one tidy dataset along with a summary dataset and returns the two datasets to the user as a list
 run_analysis<-function(){
     
+    ##install.packages("dplyr") if not already installed
+    if (!require("dplyr",character.only = TRUE))
+    {
+        install.packages("dplyr",dep=TRUE)
+        if(!require("dplyr",character.only = TRUE)) stop("Package not found")
+    }
+    
     ## Verify that data file exists in the working directory
     strZipFile <- "getdata-projectfiles-UCI HAR Dataset.zip"
     if (!file.exists(as.character(strZipFile))) {
@@ -59,10 +66,8 @@ run_analysis<-function(){
     colnames(FullData)[-(1:2)]<-sub("gyro","GyroScope",colnames(FullData)[-(1:2)]) 
     colnames(FullData)[-(1:2)]<-sub("Mag","Magnitude",colnames(FullData)[-(1:2)]) 
     
-    ##install.packages("dplyr")
-    require("dplyr")
-    
-    ##create second summary dataset, with the mean for each varaible
+
+    ##create summary dataset, with the mean for each varaible
     SummaryData<-group_by(FullData,Subject,Activity)%>%summarise_each(funs(mean),-(Subject:Activity))
     
     ##Return the two datasets to the user as a list
