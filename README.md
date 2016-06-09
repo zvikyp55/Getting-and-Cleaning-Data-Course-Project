@@ -58,3 +58,6 @@ The following files are available for the train and test data. Their description
 - Appropriately labels the FullData data set with descriptive variable names, replacing abbreviated labels wit hfull descriptions
 - From the FullData data set, creates a second, independent tidy data set with the average of each variable for each activity and each subject called SummaryData.
 - The two datasets are then saved to the working directory as FullData.Rda and SummaryData.Rda (Use the load function to load these datasets to your R session.)
+ 
+
+This repository contains the resulting tidy datasets FullData.Rda and SummaryData.Rda
