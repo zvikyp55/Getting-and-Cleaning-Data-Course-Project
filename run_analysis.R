@@ -1,6 +1,6 @@
 ##run_analysis.R - Script for Assignment: Getting and Cleaning Data Course Project
 
-## Step 1. Create function to request ZIP file as input, verify input
+## This script collates several datasets into one tidy dataset along with a summary dataset and returns the two datasets to the user as a list
 run_analysis<-function(){
     
     ## Verify that data file exists in the working directory
