@@ -2,6 +2,21 @@
 
 ##The script in this repository serves to collate a collection of existing datasets into one tidy dataset along with a summary dataset.
 
+
+Key components of tidy datasets are:
+- Each variable forms a column.
+- Each observation forms a row.
+- Each type of observational unit forms a table.
+ 
+And NOT:
+- Column headers are values, not variable names.
+- Multiple variables are stored in one column.
+- Variables are stored in both rows and columns.
+- Multiple types of observational units are stored in the same table.
+- A single observational unit is stored in multiple tables.
+
+##The Data
+
 One of the most exciting areas in all of data science right now is wearable computing. Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The raw data processed by the script is data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:
 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
