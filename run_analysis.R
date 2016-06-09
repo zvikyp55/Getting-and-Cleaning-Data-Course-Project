@@ -70,8 +70,9 @@ run_analysis<-function(){
     ##create summary dataset, with the mean for each varaible
     SummaryData<-group_by(FullData,Subject,Activity)%>%summarise_each(funs(mean),-(Subject:Activity))
     
-    ##Return the two datasets to the user as a list
-    return(list(FullData,SummaryData))
+    ##save the datasets as R data files, can be reloaded using load("FullData.Rda")
+    save(FullData,file="FullData.Rda")
+    save(SummaryData,file="SummaryData.Rda")
     
 
 }
