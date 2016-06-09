@@ -15,6 +15,8 @@ And NOT:
 - Multiple types of observational units are stored in the same table.
 - A single observational unit is stored in multiple tables.
 
+(Hadley Wickham - Journal of Statistical Software Volume VV, Issue II)
+
 ##The Data
 
 One of the most exciting areas in all of data science right now is wearable computing. Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The raw data processed by the script is data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:
