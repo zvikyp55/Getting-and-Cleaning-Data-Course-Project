@@ -9,7 +9,9 @@ run_analysis<-function(){
         install.packages("dplyr",dep=TRUE)
         if(!require("dplyr",character.only = TRUE)) stop("Package not found")
     }
-    
+    WebUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip" ##Url
+    download.file(WebUrl, 'UCIHARdataset.zip', method='curl') ##Download the Zip file
+  
     ## Verify that data file exists in the working directory
     strZipFile <- "getdata-projectfiles-UCI HAR Dataset.zip"
     if (!file.exists(as.character(strZipFile))) {
