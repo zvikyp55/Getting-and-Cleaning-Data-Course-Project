@@ -78,5 +78,6 @@ run_analysis<-function(){
     save(FullData,file="FullData.Rda")
     save(SummaryData,file="SummaryData.Rda")
     
-
+    ## Write the summary data to a file
+    write.table(SummaryData, "SummaryData.txt", row.names=FALSE, quote=FALSE)
 }
